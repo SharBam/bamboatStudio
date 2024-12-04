@@ -1,17 +1,23 @@
 function setup() {
 	createCanvas(windowWidth, windowHeight);
-	background(255);
-	frameRate(120);
+  background(255, 0);
+textAlign(CENTER, CENTER);
 }
 
 function draw() {
-	noStroke();
-	fill(mouseX / 3, mouseX / 6, mouseY / 2, 229);
-	circle(mouseX - 1, mouseY - 1, 12 * noise(frameCount / mouseX + mouseY));
+	// noStroke();
+	// fill(mouseX / 3, mouseX / 6, mouseY / 2, 229);
+  // circle(mouseX - 1, mouseY - 1, 12 * noise(frameCount / mouseX + mouseY));
+      stroke(0);
+			strokeWeight(0.5);
+			fill(random(255, 255));
+			text('Coming Soon', mouseX, mouseY);
+			textSize(64);
+  
 }
 
 function mousePressed() {
-	background(0);
+	background(255);
 }
 
 function mouseReleased() {
