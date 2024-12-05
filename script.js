@@ -1,19 +1,18 @@
 function setup() {
 	createCanvas(windowWidth, windowHeight);
   background(255, 0);
-textAlign(CENTER, CENTER);
+	textAlign(CENTER, CENTER);
+		textSize(64);
 }
 
 function draw() {
-	// noStroke();
-	// fill(mouseX / 3, mouseX / 6, mouseY / 2, 229);
-  // circle(mouseX - 1, mouseY - 1, 12 * noise(frameCount / mouseX + mouseY));
       stroke(0);
 			strokeWeight(0.5);
-			fill(random(255, 255));
+	fill(random(255, 255));
+	if (mouseX > 0 && mouseY > 0) {
 			text('Coming Soon', mouseX, mouseY);
-			textSize(64);
-  
+	}
+
 }
 
 function mousePressed() {
