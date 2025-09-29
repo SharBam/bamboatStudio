@@ -40,7 +40,7 @@ header {
 	font-family: var(--secondary-font);
 	padding: 1rem;
 	width: 50%;
-
+overflow-y: scroll;
 }
 
 header p {
@@ -63,7 +63,7 @@ ol {
 main {
 	padding: 1rem;
 	width: 25%;
-
+overflow-y: scroll;
 }
 
 section p,
