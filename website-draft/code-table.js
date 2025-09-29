@@ -12,14 +12,13 @@ $(document).ready(function () {
 
 				if (index == 0) return;
 
-				let div = $(
-					`<p>` +
-						entry.about +
-						`</p>`
-				).appendTo('#about');
+				let nav = $(`<p>` + entry.studio + `</p>`).appendTo('#studio');
 
-				let ul = $(`<li>` + entry.references + `</li>`).appendTo('#references');
-				
+				let ul = $(`<li>` + entry.services + `</li>`).appendTo('#services');
+
+				let ol = $(`<li>` + entry.projects + `</li>`).appendTo('#projects');
+
+				// let article = $(`<p>` + entry.bio + `</p>`).appendTo('#bio');
 			});
 		}
 	);
