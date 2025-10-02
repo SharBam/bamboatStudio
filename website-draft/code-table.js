@@ -12,11 +12,40 @@ $(document).ready(function () {
 
 				if (index == 0) return;
 
-				let nav = $(`<p>` + entry.studio + `</p>`).appendTo('#studio');
+				let div = $(`<p>` + entry.studio + `</p>`).appendTo('#studio');
 
 				let ul = $(`<li>` + entry.services + `</li>`).appendTo('#services');
 
-				let ol = $(`<li>` + entry.projects + `</li>`).appendTo('#projects');
+				let details = $(
+					`<details>
+					<summary>
+						<span>
+						<p>` +
+						entry.ptitle +
+						`</p>
+						<p>` +
+						entry.partist +
+						`</p>
+						<p>` +
+						entry.pdate +
+						`</p>
+					</span><p>` +
+						entry.prole +
+						`</p>
+						</summary>
+						<div>` +
+						entry.prole +
+						`</div>
+						</details>`
+				).appendTo('#project');
+
+				// let details = $(
+				// 	`<details><summary>` +
+				// 		entry.project +
+				// 		`</summary><ol><li>` +
+				// 		entry.project +
+				// 		`</li></ol></details>`
+				// ).appendTo('#project');
 
 				// let article = $(`<p>` + entry.bio + `</p>`).appendTo('#bio');
 			});
