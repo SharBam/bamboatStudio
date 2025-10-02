@@ -11,7 +11,7 @@
 	--text: #000000;
 	--grey: #d0d0d6;
 	--dust-rose: #e4a5a5;
-	--third-color: #692f1e;
+	--third-color: #877147;
 	font-family: var(--body-font);
 	color: var(--text);
 	font-size: 16px;
@@ -51,6 +51,10 @@ header a {
 	cursor: pointer;
 	color: var(--third-color);
 	padding: 0 0.25rem;
+}
+
+header a:hover {
+	color: var(--dust-rose);
 }
 
 header,
@@ -126,11 +130,11 @@ main nav a {
 
 main section {
 	/* margin-left: 40%; */
-		/* margin-top: 5vh; */
+	/* margin-top: 5vh; */
 }
-main section details {
+main section details summary span {
 	cursor: pointer;
-	grid-column: 2;
+
 }
 
 main section details summary:hover {
@@ -142,10 +146,6 @@ main section details summary p {
 	margin: 0 0.25rem 0 0;
 }
 
-/* main section details summary span p:nth-of-type(even)::before,
-main section details summary span p:nth-of-type(even)::after {
-	content: '\00B7';
-} */
 
 main section details summary span p:nth-of-type(even)::before {
 	padding-right: 0.25rem;
@@ -155,21 +155,25 @@ main section details summary span p:nth-of-type(even)::after {
 	padding-left: 0.25rem;
 }
 
-main section details[open] summary p {
-	color: var(--dust-rose);
-	/* text-decoration: underline; */
+main section details[open] {
+	border-bottom: 1px dotted var(--grey);
+	margin-bottom: 1rem;
 }
-/* 
-main section details[open] summary span + p {
-	color: var(--dust-rose);
-} */
 
-main section details summary span + p {
+main section details[open] summary p {
+	color: var(--third-color);
+
+}
+
+
+main section details p,
+main section details a {
 	font-size: 0.85rem;
 	font-family: var(--secondary-font);
 }
 
-main section details {
+
+main section details:not(main section details:last-of-type) {
 	padding: 0 0 1rem 0;
 }
 
@@ -179,7 +183,40 @@ section details summary {
 	justify-content: space-between;
 }
 
-section details summary span +  p {
+section details summary + div {
+	margin: 1rem 0;
+	/* padding: 0 1rem; */
+}
+
+main section details div p {
+color: var(--dust-rose);
+}
+
+main section details div a {
+display: block;
+text-align: center;
+color: var(--third-color);
+margin: 0;
+padding: 2px;
+border: 1px solid var(--third-color);
+text-decoration: none;
+}
+
+main section details div a:hover {
+	box-shadow: var(--third-color) 0px 0px 3px inset;
+}
+
+section details summary + div img {
+	width: 100%;
+	height: auto;
+
+}
+
+section details summary + div img[src="undefined"] {
+    display: none;
+}
+
+section details summary span + p {
 	text-align: right;
 }
 
@@ -197,22 +234,19 @@ section details summary span +  p {
 	font-family: var(--secondary-font);
 }
 
-
-
-/* .split-col li:nth-of-type(1) {
-	margin-top: 0;
+.split-col li:nth-of-type(even) {
+	margin: 0.5rem 0;
 }
 
-.split-col li:nth-of-type(n + 2) {
-	margin: 1rem 0;
-} */
+.split-col article a {
+	color: var(--third-color);
+}
 
-.split-col h5::before {
-	content: ' ';
-	display: inline-block;
-
+.split-col article a:hover {
+	color: var(--dust-rose);
 }
 
 .split-col article p {
 	margin-top: 0;
 }
+

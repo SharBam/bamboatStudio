@@ -33,9 +33,11 @@ $(document).ready(function () {
 						entry.prole +
 						`</p>
 						</summary>
-						<div>` +
-						entry.prole +
-						`</div>
+						<div><img src="` +
+						entry.pimg +
+						`" title="Project Image"><a href="` +
+						entry.plink +
+						`">View project</a></div>
 						</details>`
 				).appendTo('#project');
 
