@@ -37,7 +37,9 @@ $(document).ready(function () {
 						entry.pimg +
 						`" title="Project Image"><a href="` +
 						entry.plink +
-						`">View project</a></div>
+						`">View project</a><p>` +
+						entry.pdescription +
+						`</p></div>
 						</details>`
 				).appendTo('#project');
 
