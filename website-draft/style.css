@@ -5,23 +5,30 @@
 	font-style: normal;
 }
 
+/* --dust-rose: rgb(208, 94, 164); */
+/* --third-color: #211ab5;
+	--dust-rose: #dca1a1; */
+/* --dust-rose: rgb(205, 151, 184); */
+
+/* --dust-rose: rgb(162, 227, 140);
+  --third-color: #aa5db1; */
+
+/* 
+	--dust-ro se: rgb(208, 206, 94);
+  --third-color: #a368a8;
+ */
+
 :root {
 	--body-font: 'Arial', sans-serif;
 	--secondary-font: 'happy-times-reg', 'Times New Roman', serif;
 	--text: #000000;
-	--grey: #888888;
-	/* --dust-rose: rgb(208, 94, 164); */
-	--third-color: #211ab5;
-	--dust-rose: #dca1a1;
-	/* --dust-rose: rgb(205, 151, 184); */
+	/* --grey: #9f9f9f; */
 
-	/* --dust-rose: rgb(162, 227, 140);
-  --third-color: #aa5db1; */
+	--grey: #000000;
 
-	/* 
 	--dust-rose: rgb(208, 206, 94);
-  --third-color: #a368a8;
- */
+	--third-color: #1d693e;
+
 	font-family: var(--body-font);
 	color: var(--text);
 	font-size: 16px;
@@ -69,6 +76,10 @@ main {
 	overflow-y: scroll;
 }
 
+header .secondary--content article  {
+	text-align: justify;
+}
+
 .page--divider {
 	width: 10%;
 	background: linear-gradient(
@@ -99,16 +110,20 @@ main ol {
 
 h5 {
 	text-transform: uppercase;
+	text-align: center;
 	margin: 0 0 1rem 0;
 	font-family: var(--body-font);
 	font-weight: normal;
 	font-size: 0.85rem;
 	color: var(--grey);
+	/* text-decoration: underline; */
+	/* font-style: italic; */
+	/* ttm */
 }
 
 ul,
 ol {
-	list-style: none;
+	list-style: square;
 	list-style-position: inside;
 	padding: 0;
 	margin: 0;
@@ -180,7 +195,7 @@ main section details div ul {
 	font-size: 0.85rem;
 	color: var(--third-color);
 	margin-top: 1rem;
-	list-style: none;
+	/* list-style: none; */
 }
 
 ul li::before {
@@ -188,7 +203,7 @@ ul li::before {
 	/* content:"\2733"; */
 	/* content:"\2734"; */
 	/* content:"\276F"; */
-	content: '\27F6';
+	/* content: '\27F6'; */
 	padding-right: 0.5rem;
 }
 
