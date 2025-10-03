@@ -14,6 +14,8 @@ $(document).ready(function () {
 
 				let div = $(`<p>` + entry.studio + `</p>`).appendTo('#studio');
 
+				let article = $(`<p>` + entry.bio + `</p>`).appendTo('#bio');
+
 				let ul = $(`<li>` + entry.services + `</li>`).appendTo('#services');
 
 				let details = $(
