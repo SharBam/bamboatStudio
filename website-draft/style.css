@@ -10,8 +10,18 @@
 	--secondary-font: 'happy-times-reg', 'Times New Roman', serif;
 	--text: #000000;
 	--grey: #888888;
-	--dust-rose: rgb(208, 94, 164);
+	/* --dust-rose: rgb(208, 94, 164); */
 	--third-color: #211ab5;
+	--dust-rose: #dca1a1;
+	/* --dust-rose: rgb(205, 151, 184); */
+
+	/* --dust-rose: rgb(162, 227, 140);
+  --third-color: #aa5db1; */
+
+	/* 
+	--dust-rose: rgb(208, 206, 94);
+  --third-color: #a368a8;
+ */
 	font-family: var(--body-font);
 	color: var(--text);
 	font-size: 16px;
@@ -63,10 +73,11 @@ main {
 	width: 10%;
 	background: linear-gradient(
 		90deg,
-		rgb(255, 255, 255) 0%,
-		rgb(220, 161, 161) 48%,
-		rgb(220, 161, 161) 52%,
-		rgb(255, 255, 255) 100%
+		white 0%,
+		var(--dust-rose) 49%,
+		white,
+		var(--dust-rose) 51%,
+		white 100%
 	);
 }
 
@@ -177,7 +188,7 @@ ul li::before {
 	/* content:"\2733"; */
 	/* content:"\2734"; */
 	/* content:"\276F"; */
-	content:"\27F6";
+	content: '\27F6';
 	padding-right: 0.5rem;
 }
 
