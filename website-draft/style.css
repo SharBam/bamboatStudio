@@ -59,13 +59,6 @@ main {
 	overflow-y: scroll;
 }
 
-/* header {
-	width: 50%;
-}
-main {
-	width: 40%;
-} */
-
 .page--divider {
 	width: 10%;
 	background: linear-gradient(
@@ -105,28 +98,11 @@ h5 {
 ul,
 ol {
 	list-style: none;
+	list-style-position: inside;
 	padding: 0;
 	margin: 0;
 }
 
-main nav {
-	margin-bottom: 10vh;
-	/* margin-left: 40%; */
-}
-
-main nav a {
-	text-transform: uppercase;
-	margin: 0 0.5rem 0 0;
-	/* font-family: var(--body-font); */
-	font-weight: normal;
-	font-size: 0.85rem;
-	color: var(--third-color);
-}
-
-main section {
-	/* margin-left: 40%; */
-	/* margin-top: 5vh; */
-}
 main section details summary {
 	cursor: pointer;
 }
@@ -153,7 +129,8 @@ main section details[open] {
 	margin-bottom: 1rem;
 }
 
-main section details[open] summary p, main section details div p {
+main section details[open] summary p,
+main section details div p {
 	color: var(--third-color);
 }
 
@@ -178,22 +155,35 @@ section details summary + div {
 	/* padding: 0 1rem; */
 }
 
-
 main section details div a {
 	display: block;
 	text-align: center;
 	color: var(--third-color);
 	margin: 0;
 	padding: 2px;
-	/* border: 1px solid white; */
 	text-decoration: none;
-
 	box-shadow: var(--third-color) 0px 0px 3px inset;
+}
+
+main section details div ul {
+	font-size: 0.85rem;
+	color: var(--third-color);
+	margin-top: 1rem;
+	list-style: none;
+}
+
+ul li::before {
+	/* content:"\2726"; */
+	/* content:"\2733"; */
+	/* content:"\2734"; */
+	/* content:"\276F"; */
+	content:"\27F6";
+	padding-right: 0.5rem;
 }
 
 main section details div a:hover {
 	box-shadow: var(--third-color) 0px 0px 1px inset;
-		/* border: 1px solid var(--grey); */
+	/* border: 1px solid var(--grey); */
 }
 
 section details summary + div img {
@@ -214,7 +204,6 @@ section details summary span + p {
 }
 
 main .secondary--content h5 {
-
 	margin-top: calc(10vh + 1rem);
 }
 
