@@ -13,15 +13,7 @@
 	/* --dust-rose: rgb(208, 94, 164); */
 	--third-color: #211ab5;
 	--dust-rose: #dca1a1;
-	/* --dust-rose: rgb(205, 151, 184); */
 
-	/* --dust-rose: rgb(162, 227, 140);
-  --third-color: #aa5db1; */
-
-	/* 
-	--dust-rose: rgb(208, 206, 94);
-  --third-color: #a368a8;
- */
 	font-family: var(--body-font);
 	color: var(--text);
 	font-size: 16px;
@@ -30,9 +22,8 @@
 html {
 	-webkit-text-size-adjust: 100%;
 	-webkit-tap-highlight-color: transparent;
-}
-
-html {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
 	margin: 0;
 	padding: 0;
 }
@@ -62,6 +53,10 @@ header a {
 	color: var(--third-color);
 }
 
+header span article {
+	text-align: justify;
+}
+
 header,
 main {
 	padding: 2.5rem 3rem;
@@ -74,9 +69,9 @@ main {
 	background: linear-gradient(
 		90deg,
 		white 0%,
-		var(--dust-rose) 49%,
+		var(--dust-rose) 49.5%,
 		white,
-		var(--dust-rose) 51%,
+		var(--dust-rose) 50.5%,
 		white 100%
 	);
 }
@@ -84,7 +79,7 @@ main {
 .studio__wrapper {
 	margin: 0 0 10vh 0;
 	line-height: 2ch;
-	font-size: 1.85rem;
+	font-size: calc(1rem + 0.85vw);
 }
 
 .studio__wrapper,
@@ -103,7 +98,8 @@ h5 {
 	font-family: var(--body-font);
 	font-weight: normal;
 	font-size: 0.85rem;
-	color: var(--grey);
+	/* color: var(--grey); */
+	text-align: center;
 }
 
 ul,
@@ -112,10 +108,12 @@ ol {
 	list-style-position: inside;
 	padding: 0;
 	margin: 0;
+	text-indent: 1.85rem hanging;
 }
 
 main section details summary {
 	cursor: pointer;
+	transition: opacity 150ms ease-in-out;
 }
 
 main section details summary:hover {
@@ -136,8 +134,12 @@ main section details summary span p:nth-of-type(even)::after {
 }
 
 main section details[open] {
-	border-bottom: 1px dotted var(--grey);
+	border-bottom: 1px dotted var(--third-color);
 	margin-bottom: 1rem;
+}
+
+main section details[open] summary {
+	margin-bottom: 2px;
 }
 
 main section details[open] summary p,
@@ -173,6 +175,7 @@ main section details div a {
 	margin: 0;
 	padding: 2px;
 	text-decoration: none;
+
 	box-shadow: var(--third-color) 0px 0px 3px inset;
 }
 
@@ -198,8 +201,12 @@ main section details div a:hover {
 }
 
 section details summary + div img {
-	width: 100%;
+	width: -webkit-fill-available;
+	width: -moz-available;
+	/* width: 100%; */
 	height: auto;
+	border: 1px solid var(--third-color);
+	/* box-shadow: var(--third-color) 0px 0px 3px inset; */
 }
 
 section details summary + div img[src='undefined'] {
@@ -233,4 +240,19 @@ main .secondary--content h5 {
 
 .secondary--content article p {
 	margin-top: 0;
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+	body {
+		flex-direction: column;
+	}
+
+	header, main {
+		width: 80%;
+		overflow: revert;
+		padding: 2rem;
+		margin: 0 auto;
+	}
 }
