@@ -290,7 +290,7 @@ main .secondary--content h5 {
 	}
 
 	header {
-		padding: 2rem 0 10vw 0;
+		padding: 2rem 0 15vw 0;
 	}
 
 	header,
@@ -301,7 +301,7 @@ main .secondary--content h5 {
 	}
 
 	main {
-		padding: 0 0 10vw 0;
+		padding: 0 0 15vw 0;
 	}
 
 	main section details summary {
@@ -329,7 +329,7 @@ main .secondary--content h5 {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
-	margin-top: 10vw;
+	margin-top: 15vw;
 }
 
 .credit__desktop {
@@ -364,7 +364,7 @@ main .secondary--content h5 {
 	}
 
 	.studio__wrapper {
-		margin: 0 0 10vw 0;
+		margin: 0 0 15vw 0;
 	}
 
 	.secondary--content article p {
@@ -372,7 +372,7 @@ main .secondary--content h5 {
 	}
 
 	main .secondary--content h5 {
-		margin-top: calc(10vw - 1rem);
+		margin-top: calc(15vw - 1rem);
 	}
 
 	.page--divider {
