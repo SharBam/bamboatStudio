@@ -9,7 +9,7 @@
 	--body-font: 'Arial', sans-serif;
 	--secondary-font: 'happy-times-reg', 'Times New Roman', serif;
 	--text: #000000;
-	--grey: #888888;
+	--grey: #acacac;
 	/* --dust-rose: rgb(208, 94, 164); */
 	--third-color: #211ab5;
 	--dust-rose: #dca1a1;
@@ -77,7 +77,7 @@ main {
 }
 
 .page--divider_mb {
-opacity: 0;
+	opacity: 0;
 	width: 6vw;
 	height: 100vh;
 	position: fixed;
@@ -88,9 +88,8 @@ opacity: 0;
 
 .page--divider_mb:first-of-type {
 	left: 0;
-		background: linear-gradient(
+	background: linear-gradient(
 		90deg,
-		
 		var(--dust-rose) 15%,
 		hsl(0, 0%, 100%) 100%
 	);
@@ -98,12 +97,7 @@ opacity: 0;
 
 .page--divider_mb:nth-of-type(2) {
 	right: 0;
-			background: linear-gradient(
-		90deg,
-		
-	white 0%,
-			var(--dust-rose) 85%
-	);
+	background: linear-gradient(90deg, white 0%, var(--dust-rose) 85%);
 }
 
 .studio__wrapper {
@@ -128,7 +122,7 @@ h5 {
 	font-family: var(--body-font);
 	font-weight: normal;
 	font-size: 0.85rem;
-	/* color: var(--grey); */
+
 	text-align: center;
 }
 
@@ -144,21 +138,29 @@ ol {
 main section details summary {
 	cursor: pointer;
 	transition: opacity 150ms ease-in-out;
+	display: grid;
+	grid-template-columns: 3fr max-content;
+	justify-content: space-between;
 }
 
-details summary::-webkit-details-marker,
-details summary::marker {
-	margin-right: 1rem;
-	padding-right: 0;
+main section details summary span {
+	grid-column: 1;
+}
+
+main section details summary span + p {
+	text-align: right;
+	grid-column: 2;
 }
 
 main section details summary:hover {
 	color: var(--third-color);
 }
 
-main section details summary p {
+main section details p,
+main section details a {
 	font-size: 0.85rem;
-	margin: 0 0.25rem 0 0;
+	margin: 0;
+	font-family: var(--secondary-font);
 }
 
 main section details summary span p:nth-of-type(even)::before {
@@ -183,25 +185,12 @@ main section details div p {
 	color: var(--third-color);
 }
 
-main section details p,
-main section details a {
-	font-size: 0.85rem;
-	font-family: var(--secondary-font);
-}
-
 main section details {
 	padding: 0 0 1rem 0;
 }
 
-section details summary {
-	display: grid;
-	grid-template-columns: 3fr max-content;
-	justify-content: space-between;
-}
-
-section details summary + div {
+main section details summary + div {
 	margin: 1rem 0 0 0;
-	/* padding: 0 1rem; */
 }
 
 main section details div a {
@@ -215,6 +204,10 @@ main section details div a {
 	box-shadow: var(--third-color) 0px 0px 3px inset;
 }
 
+main section details div a:hover {
+	box-shadow: var(--third-color) 0px 0px 1px inset;
+}
+
 main section details div ul {
 	font-size: 0.85rem;
 	color: var(--third-color);
@@ -223,17 +216,8 @@ main section details div ul {
 }
 
 ul li::before {
-	/* content:"\2726"; */
-	/* content:"\2733"; */
-	/* content:"\2734"; */
-	/* content:"\276F"; */
 	content: '\27F6';
 	padding-right: 0.5rem;
-}
-
-main section details div a:hover {
-	box-shadow: var(--third-color) 0px 0px 1px inset;
-	/* border: 1px solid var(--grey); */
 }
 
 section details summary + div img {
@@ -247,10 +231,6 @@ section details summary + div img {
 
 section details summary + div img[src='undefined'] {
 	display: none;
-}
-
-section details summary span + p {
-	text-align: right;
 }
 
 .secondary--content {
@@ -278,6 +258,35 @@ main .secondary--content h5 {
 	margin-top: 0;
 }
 
+.credit__desktop,
+.credit__mobile {
+	color: var(--grey);
+	font-size: 0.65rem;
+	margin-top: 10vh;
+
+}
+
+.credit__desktop a,
+.credit__mobile a {
+		color: var(--grey);
+		text-decoration: none;
+}
+
+.credit__desktop p,
+.credit__mobile p {
+	margin: 0 4px 0 0;
+}
+
+.credit__desktop {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+.credit__mobile {
+	display: none;
+}
+
 @media only screen and (max-width: 1024px) {
 	body {
 		flex-direction: column;
@@ -296,6 +305,65 @@ main .secondary--content h5 {
 
 	main {
 		padding: 0 0 10vw 0;
+	}
+
+	main section details summary {
+		grid-template-columns: 1.5rem 3fr max-content;
+		align-items: baseline;
+	}
+
+	main section details details > summary {
+		list-style: none;
+	}
+
+	main section details summary::-webkit-details-marker {
+		display: none;
+	}
+
+	main section details summary::before {
+		content: '+';
+	}
+
+	details[open] summary::before {
+		content: '\2014';
+	}
+
+.credit__mobile {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	margin-top: 10vw;
+}
+
+.credit__desktop {
+	display: none;
+}
+	/* 
+	main section details summary span {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	} */
+
+	/* main section details summary span p {
+		margin-right: 0.25rem;
+	} */
+
+	/* main section details summary span p + p::before {
+		content: '\00B7';
+		margin-right: 0.25rem;
+	} */
+
+	/* main section details summary span + p {
+		text-align: left;
+	} */
+
+	main section details summary span {
+		grid-column: 2;
+	}
+
+	main section details summary span + p {
+		grid-column: 3;
 	}
 
 	.studio__wrapper {
