@@ -1,32 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-	<!-- (c) 20242 to present -->
-	<!-- last updated by rupali,  Dec 14th, 2024 -->
-	<!-- CURSOR designed on p5.js  -->
 	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Bamboat Studio</title>
-
-		<meta name="title" content="Bamboat Studio" />
-		<meta name="description" content="--Coming Soon--" />
-
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://bamboatstudio.com/" />
-		<meta property="og:title" content="Bamboat Studio" />
-		<meta property="og:description" content="--Coming Soon--" />
-		<meta property="og:image" content=“https://bamboatstudio.com/favicon.png”>
-
-		<link rel="stylesheet" type="text/css" href="style.css" />
-		<link rel="icon" type="image/png" href="favicon.png" />
-		<link rel="icon" type="image/x-icon" href="favicon.ico" />
-
-		<script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
-		<script async src="script.js"></script>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>bamboatstudio.com</title>
+		<link rel="stylesheet" href="style.css" type="text/css" />
 	</head>
-
 	<body>
-		<p>Bamboat Studio</p>
-		<p>bamboatstudio [@] gmail.com</p>
+		<div class="page--divider_mb"></div>
+		<div class="page--divider_mb"></div>
+		<header>
+			<div class="studio__wrapper" id="studio">
+			</div>
+
+			<div class="secondary--content">
+				<h5>Bio</h5>
+				<span>
+					<article id="bio"></article>
+				</span>
+			</div>
+			<div class="credit__desktop">
+				<p>Designed by</p>
+				
+				<a
+					href="https://rupalimorzaria.com/"
+					target="_blank"
+					title="rupalimorzaria.com"
+				>rm</a
+				>
+			</div>
+		</header>
+		<div class="page--divider"></div>
+
+		<main>
+			<section id="project">
+				<h5>People and projects</h5>
+			</section>
+			<div class="secondary--content">
+				<h5>​Services</h5>
+				<span>
+					<ul id="services"></ul>
+				</span>
+			</div>
+			<div class="credit__mobile">
+				<p>
+				Designed by
+				<a
+					href="https://rupalimorzaria.com/"
+					target="_blank"
+					title="rupalimorzaria.com"
+				>rm</a
+				></p>
+			</div>
+		</main>
+
+		<script
+			src="//code.jquery.com/jquery-3.6.0.min.js"
+			type="text/javascript"
+		></script>
+		<script src="code-table.js" type="text/javascript"></script>
 	</body>
 </html>
